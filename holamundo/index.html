@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Vue3</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <!-- aquí insertamos el script Vue3 -->
+        <script src="https://unpkg.com/vue@next"></script>
+    </head>
+    <body>
+        <!-- div en el que incorporaremos Vue3 -->
+        <div id="app"> 
+           <h1>{{titulo}}</h1> <!-- añadimos doble llavecitas -->
+        </div>
+        <!-- llamamos a main js -->
+        <script src="main.js"></script>
+        <!-- añadimos otro script aquí para montar -->
+        <script>
+            const mountedApp=app.mount('#app')
+        </script>
+    </body>
+</html>
