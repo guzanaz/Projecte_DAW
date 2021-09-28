@@ -13,11 +13,30 @@
         <div id="app"> 
            <h1>{{titulo}}</h1> <!-- añadimos doble llavecitas -->
         </div>
+
+        <div>
+            <input type="text" id="test" value="ppp">
+        </div>
+
+
         <!-- llamamos a main js -->
         <script src="main.js"></script>
         <!-- añadimos otro script aquí para montar -->
         <script>
             const mountedApp=app.mount('#app')
+        </script>
+
+        <script>
+            try{
+                var test=document.getElementById("test").value;
+            }catch (error){
+                console.log(error);
+            }
+
+            function isValid(param1){
+                console.log("la meva primera funcio"+param1)
+            }
+            
         </script>
     </body>
 </html>
