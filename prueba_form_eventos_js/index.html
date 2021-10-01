@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Vue3</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- aquí insertamos el script Vue3 -->
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+
+<body>
+    <form id="app" @submit="checkForm" action="/something" method="post">
+  
+        <p v-if="errors.length">
+          <strong>Please correct the following error(s):</strong>
+          <ul>
+            <li v-for="error in errors">{{ error }}</li>
+          </ul>
+        </p>
+        
+        <p>
+          <input placeholder="nombre" type="text" name="name" id="name" v-model="name">
+        </p>
+      
+        <p>
+          
+      <input placeholder="email" type="text" id="email">
+      </p>
+      
+        
+      
+        <p>
+          <input type="submit" value="Submit">  
+        </p>
+      
+      </form>
+      
+
+
+
+    <!-- llamamos a main js -->
+    <script src="/prueba_form_eventos_js/main.js"></script>
+    <!-- añadimos otro script aquí para montar -->
+    <script>
+        const mountedApp = app.mount('#app');
+    </script>
+</body>
+
+</html>
