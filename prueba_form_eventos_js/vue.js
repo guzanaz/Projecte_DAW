@@ -10,7 +10,7 @@ const app = new Vue({
       if(this.name && this.age) return true;
       this.errors = [];
       if(!this.name) this.errors.push("Name required.");
-      if(!this.name) this.errors.push("email required.");
+      if(!this.email) this.errors.push("email required.");
       e.preventDefault();
     }
   }
